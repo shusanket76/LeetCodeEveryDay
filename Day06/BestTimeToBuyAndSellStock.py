@@ -6,7 +6,7 @@ def maxProfit(self, prices):
         """
         l=0
         r=l+1
-        profit = 0
+        profit =0
         while r<=len(prices)-1:
             if prices[l]>prices[r]:
                 l=l+1
