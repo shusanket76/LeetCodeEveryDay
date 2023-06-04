@@ -1,4 +1,4 @@
-link = "https://leetcode.com/problems/3sum/"
+# link = "https://leetcode.com/problems/3sum/"
 
 
 def threeSum(nums):
@@ -28,6 +28,3 @@ def threeSum(nums):
             else:
                 l=l+1
     return res
-a = threeSum([-1,0,1,2,-1,-4])
-print(a)
-    
