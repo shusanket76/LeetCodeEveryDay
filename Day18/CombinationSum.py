@@ -1,8 +1,8 @@
 # link ="https://leetcode.com/problems/combination-sum/"
-class Solution(object):
-    def combinationSum(self,candidates, target):
+# class Solution(object):
+def combinationSum(self,candidates, target):
         res = []
-        print()
+      
         
         def dfs(i,curr,total):
             if total==target:
