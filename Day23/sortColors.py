@@ -1,7 +1,7 @@
 # link="https://leetcode.com/explore/interview/card/microsoft/47/sorting-and-searching/193/"
 # INSERTION SORT
 
-
+# .
 class Solution(object):
     def sortColors(self, nums):
         """
