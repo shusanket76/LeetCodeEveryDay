@@ -15,3 +15,5 @@ class Solution(object):
                 nums[j+1]=nums[j]
                 j=j-1
             nums[j+1]=anchor
+            
+            
