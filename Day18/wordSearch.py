@@ -22,7 +22,7 @@ def exist(board, word):
                 if dfs(r,c,0):
                     return True
         return False
-board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]
-word="ABCE"
+board = [["a","b"],["c","d"]]
+word="cdba"
 a = exist(board,word)
 print(a)
