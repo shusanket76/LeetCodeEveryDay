@@ -1,22 +1,21 @@
 # link = "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/"
 def findMin(nums):
-        l,r=0,len(nums)-1
-    
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        l=0
+        res = nums[0]
+        r=len(nums)-1
         while l<=r:
-            mid = int((l+r)/2)
             if nums[l]<nums[r]:
-                return nums[l]
-            if nums[l]<nums[mid]:
-                if l==mid:
-                    l=mid+1
-                else:
-                    l=mid
+                res = min(res,nums[l])
+                return res
+                
+            m = int((l+r)/2)
+            res = min(res,nums[m])
+            if nums[m]>=nums[l]:
+                l=m+1
             else:
-                if r==mid:
-                    r=mid-1
-                else:
-                    r=mid
-        a=l+1
-        if a>len(nums)-1:
-            return nums[0]
-        return nums[a]
+                r=m-1
+        return res
