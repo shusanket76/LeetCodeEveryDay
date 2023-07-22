@@ -1,7 +1,4 @@
-class Solution(object):
-    def getSum(self, a, b):
-        """
-        :type a: int
-        :type b: int
-        :rtype: int
-        """
+has = set()
+has.add(12)
+has.add(14)
+has.add(11)
