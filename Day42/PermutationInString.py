@@ -1,4 +1,5 @@
-def checkInclusion(s1: str, s2: str):
+class Solution:
+    def checkInclusion(self, s1: str, s2: str):
         weneed = {}
         wehave = {}
         wehaveCount=0
@@ -27,8 +28,3 @@ def checkInclusion(s1: str, s2: str):
                         return True
             r=r+1
         return False
-
-s1 = "hello"
-s2="ooolleoooleh"
-a = checkInclusion(s1,s2)
-print(a)
