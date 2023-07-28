@@ -1,5 +1,5 @@
 class Solution:
-    def plusOne(self, digits: List[int]):
+    def plusOne(self, digits: [int]):
         num = ""
         for x in digits:
             num+=str(x)
