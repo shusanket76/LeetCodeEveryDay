@@ -1,5 +1,5 @@
 class Solution:
-    def searchMatrix(self, matrix: List[List[int]], target: int):
+    def searchMatrix(self, matrix: [[int]], target: int):
         rl = 0
         rr = len(matrix)-1
         row=0
