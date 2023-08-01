@@ -1,6 +1,6 @@
 import math
 class Solution:
-    def minEatingSpeed(self, piles: List[int], h: int) -> int:
+    def minEatingSpeed(self, piles: [int], h: int) -> int:
         maxFromArray = max(piles)
        
         l=1
