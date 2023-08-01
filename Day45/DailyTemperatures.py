@@ -1,6 +1,6 @@
 from collections import deque
 class Solution:
-    def dailyTemperatures(self, temperatures: List[int]):
+    def dailyTemperatures(self, temperatures):
         stack = deque()
         l=r=0
         res=[0 for x in range(len(temperatures))]
