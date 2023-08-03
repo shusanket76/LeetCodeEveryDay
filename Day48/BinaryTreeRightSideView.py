@@ -6,7 +6,7 @@ from collections import deque
 #         self.left = left
 #         self.right = right
 class Solution:
-    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+    def rightSideView(self, root):
         queue = deque()
         queue.append(root)
         res = []
