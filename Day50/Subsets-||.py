@@ -1,5 +1,5 @@
 class Solution:
-    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+    def subsetsWithDup(self, nums:[int]):
         res = [[]]
         def dfs(nums,pointer,curr):
             if pointer>len(nums)-1:
