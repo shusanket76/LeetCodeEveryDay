@@ -1,5 +1,5 @@
 class Solution:
-    def permute(self, nums: List[int]) -> List[List[int]]:
+    def permute(self, nums: [int]):
         res = []
 
         if len(nums)==1:
