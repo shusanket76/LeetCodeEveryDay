@@ -1,7 +1,5 @@
 class Solution:
     def subsets(self, nums: [int]) ->[[int]]:
-
-
         res = [[]]
         def dfs(nums, pointer,curr):
             if  pointer>len(nums)-1:

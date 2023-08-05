@@ -1,7 +1,6 @@
 class Solution:
     def permute(self, nums: [int]):
         res = []
-
         if len(nums)==1:
             return [nums[:]]
         for x in range(len(nums)):
