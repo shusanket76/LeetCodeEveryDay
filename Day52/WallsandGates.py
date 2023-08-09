@@ -13,6 +13,7 @@ class Solution:
                 if rooms[r][c]==0:
                     q.append([r,c])
                     visit.add((r,c))
+                    
         def addRoom(r,c):
             if r<0 or r==row or c<0 or c==col or (r,c) in visit or rooms[r][c]==-1:
                 return 
