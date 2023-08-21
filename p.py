@@ -1,21 +1,10 @@
-def change(amount: int, coins:[int]) -> int:
-        res = []
-        def dfs(amount, curr, pointer):
-            if amount==0:
-                res.append(curr[:])
-                return 
-            if amount<0 or pointer>=len(coins):
-                return 
-            for x in range(pointer, len(coins)):
-                curr.append(coins[x])
-                dfs(amount-coins[x], curr, x+1)
-                curr.pop()
-                dfs(amount, curr, x+1)
+from collections import deque
 
-        curr = []
-        pointer = 0
-        dfs(amount, curr, pointer)
-        print(res)
-        return len(res)
-a = change(5,[1,2,5])
-print(a)
+stack = deque()
+stack.append(1)
+stack.append(5)
+stack.append(4)
+stack.append(3)
+stack.append(2)
+print(stack[-2])
+print(stack)
