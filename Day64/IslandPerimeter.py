@@ -1,5 +1,5 @@
 class Solution:
-    def islandPerimeter(self, grid: List[List[int]]) -> int:
+    def islandPerimeter(self, grid):
         count = [0]
         path=set()
         def dfs(x,y,path):
