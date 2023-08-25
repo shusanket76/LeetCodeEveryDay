@@ -33,3 +33,22 @@ class Solution:
         pointer = 0
         dfs(nums, pointer, [])
         return res
+    # =======================================================================
+    # SOLUTION 2
+    # class Solution:
+    # def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+    #     res =[]
+    #     nums.sort()
+    #     def dfs(pointer, curr):
+    #         if pointer == len(nums):
+    #             res.append(curr[:])
+    #             return 
+    #         curr.append(nums[pointer])
+    #         dfs(pointer+1, curr)
+    #         curr.pop()
+    #         while pointer+1<len(nums) and nums[pointer]==nums[pointer+1]:
+    #             pointer+=1
+    #         dfs(pointer+1,curr)
+    #     dfs(0, curr=[])
+    #     return res
+        
