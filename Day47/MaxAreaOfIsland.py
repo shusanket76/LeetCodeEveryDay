@@ -1,27 +1,22 @@
 class Solution:
-    def maxAreaOfIsland(self, grid) -> int:
-        res = -(len(grid)*len(grid[0]))
+    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
+        res = [0]
+        haset = set()
+        def dfs(a,b,c):
+            if a>=0 and b>=0 and a<len(grid) and b<len(grid[0]) and grid[a][b]==1 and (a,b) not in haset:
+                haset.add((a,b))
+                return 1+dfs(a-1,b,c+1)+dfs(a+1,b,c+1)+dfs(a,b-1,c+1)+dfs(a,b+1,c+1)
+            else:
+                return 0
+                
 
-        path=set()
-        def dfs(x,y,path,count):
-            if (x>=0 and y>=0 and x<len(grid) and y<len(grid[0]) and (x,y) not in path and grid[x][y]==1):
-                path.add((x,y))
-                count+=1
-                count= dfs(x-1,y,path, count)
-                count =dfs(x+1,y,path, count)
-                count = dfs(x,y+1,path, count)
-                count = dfs(x,y-1,path, count)
-            return count
+
             
-            
+
+        for a in range(len(grid)):
+            for b in range(len(grid[0])):
+                if grid[a][b] ==1:
+                    c = 0
+                    res[0] = max(res[0], dfs(a,b,c))
+        return res[0]
         
-        for x in range(len(grid)):
-            for y in range(len(grid[0])):
-                if grid[x][y]==1:
-                    count = 0
-                    res = max(res, dfs(x,y,path, count))
-        if res<0:
-            return 0
-        
-        return res
-    
